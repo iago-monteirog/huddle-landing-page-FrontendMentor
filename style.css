@@ -45,7 +45,7 @@ main {
 }
 
 .mockups img {
-    height: 430px;
+    max-height: 430px;
     width: 90%;
 }
 
@@ -61,7 +61,7 @@ main {
     padding-left: 50px;
 }
 
-.btn {
+.btn button {
     font-family: 'Poppins', sans-serif;
     background-color: hsl(300, 69%, 100%);
     color: hsl(257, 20%, 49%);
@@ -77,6 +77,18 @@ main {
     justify-content: center;
     min-height: 40px;
     width: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: hsl(300, 69%, 100%);
+    box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.btn button:active {
+    box-shadow: none;
+    
 }
 
 footer {
@@ -97,7 +109,8 @@ footer {
 .social img {
     width: 2em;
     height: 2em;
-    color: hsl(300, 69%, 100%);;
+    color: hsl(300, 69%, 100%);
+    ;
 }
 
 .attribution {
@@ -107,4 +120,40 @@ footer {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 900px) {
+    body {
+        background-image: url("./images/bg-mobile.svg");
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .mockups {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        text-align: center;
+        margin: 30px;
+        padding: 0;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn button {
+        width: 75%;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
 }
